@@ -14,14 +14,15 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice () {
-    let choice = prompt("Enter your choice (0 Rock, 1 Paper, 2 Scissors):");
-    if (choice == 0) {
-        return choice; // Rock
-    } else if (choice == 1) {
-        return choice; // Paper
-    } else if (choice == 2) {
-        return choice; // Scissors
+function getHumanChoice() {
+    let choice = prompt("Enter your choice (Rock, Paper, Scissors):").toLowerCase(); // Convert input to lowercase
+
+    if (choice === "rock") {
+        return 0; // Rock
+    } else if (choice === "paper") {
+        return 1; // Paper
+    } else if (choice === "scissors") {
+        return 2; // Scissors
     } else {
         return "invalid";
     }
@@ -51,7 +52,7 @@ function playGame() {
             computerScore += 1;
         } else if (humanChoice == 2 && computerChoice == 1) {
             console.log("Scissors wins against paper, you win! +1 Player");
-            humanScore += 1;
+            humanScore += 1; 
         } else {
             console.log("Invlaid.");
         }
