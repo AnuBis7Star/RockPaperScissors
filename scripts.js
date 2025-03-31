@@ -39,16 +39,13 @@ function playRound (humanChoice, computerChoice) {
         document.querySelector("#results").textContent = "Invalid!";
     }
     document.querySelector("#score").textContent = `Player: ${humanScore}, Computer: ${computerScore}`;
+    if (humanScore == 5) {
+        document.querySelector("#results").textContent = "Winner is PLAYER!";
+        
+    } else if (computerScore == 5) {
+        document.querySelector("#results").textContent = "Winner is COMPUTER!";
+    }
 }
-
-// if (humanScore > computerScore) {
-//     console.log("Winner is PLAYER!");
-// } else if (humanScore < computerScore) {
-//     console.log("Winner is COMPUTER!");
-// } else {
-//     console.log("It's a DRAW!");
-// }
-
 const rock = document.querySelector("#rock");
 rock.onclick = () => playRound(0,getComputerChoice());
 
