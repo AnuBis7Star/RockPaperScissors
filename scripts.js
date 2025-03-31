@@ -50,9 +50,9 @@ const rock = document.querySelector("#rock");
 rock.onclick = () => playRound(0,getComputerChoice());
 
 const paper = document.querySelector("#paper");
-paper.onclick = () => playRound(0,getComputerChoice());
+paper.onclick = () => playRound(1,getComputerChoice());
 
 const scissors = document.querySelector("#scissors");
-scissors.onclick = () => playRound(0,getComputerChoice());
+scissors.onclick = () => playRound(2,getComputerChoice());
 
 const results = document.querySelector("#results");
