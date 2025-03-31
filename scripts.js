@@ -41,9 +41,14 @@ function playRound (humanChoice, computerChoice) {
     document.querySelector("#score").textContent = `Player: ${humanScore}, Computer: ${computerScore}`;
     if (humanScore == 5) {
         document.querySelector("#results").textContent = "Winner is PLAYER!";
-        
+        rock.disabled = true;  
+        paper.disabled = true; 
+        scissors.disabled = true; 
     } else if (computerScore == 5) {
         document.querySelector("#results").textContent = "Winner is COMPUTER!";
+        rock.disabled = true;  
+        paper.disabled = true; 
+        scissors.disabled = true; 
     }
 }
 const rock = document.querySelector("#rock");
